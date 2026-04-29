@@ -97,4 +97,4 @@ POST /api/productos/{id}/decrement-stock
 
 ## 🌐 Deploy público
 
-Pendiente
+https://api-productos-6ncp.onrender.com/swagger/
