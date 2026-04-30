@@ -75,6 +75,11 @@ public class ProductoService
 
     public async Task<bool> IncrementStock(int id, int cantidad)
     {
+        if (cantidad < 0)
+        {
+            throw new ArgumentException("El stock no puede ser negativo");
+        }
+
         var producto = await _repository.GetByIdAsync(id);
 
         if (producto == null)
@@ -89,6 +94,10 @@ public class ProductoService
 
     public async Task<bool> DecrementStock(int id, int cantidad)
     {
+        if (cantidad < 0)
+        {
+            throw new ArgumentException("El stock no puede ser negativo");
+        }
         var producto = await _repository.GetByIdAsync(id);
 
         if (producto == null)
