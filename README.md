@@ -55,7 +55,7 @@ git clone https://github.com/gaps0729/api-productos.git
 ### 2. Entrar al proyecto
 
 
-cd api-productos-clean
+cd api-productos
 
 
 ---
