@@ -43,29 +43,69 @@ src/
 
 ---
 
-##  Ejecutar localmente
+##  Ejecución local
 
-### Restaurar dependencias
+### 1. Clonar repositorio
+
+
+git clone https://github.com/gaps0729/api-productos.git
+
+
+
+### 2. Entrar al proyecto
+
+
+cd api-productos-clean
+
+
+---
+
+#  Ejecutar con Docker
+
+## Requisitos
+
+- Docker Desktop instalado
+
+## Levantar contenedores
+
+
+docker compose up --build
+
+
+La API quedará disponible en:
+
+
+http://localhost:8080/swagger
+
+
+---
+
+#  Ejecutar manualmente con .NET
+
+## Requisitos
+
+- .NET 8 SDK instalado
+
+## Restaurar paquetes
 
 
 dotnet restore
 
 
-### Ejecutar API
+## Ejecutar proyecto
 
 
 dotnet run --project src/WebAPI
 
 
----
-
-##  Swagger
+La API quedará disponible en:
 
 
 http://localhost:5000/swagger
 
 
 ---
+
 
 ##  Endpoints principales
 
@@ -95,6 +135,6 @@ POST /api/productos/{id}/decrement-stock
 
 ---
 
-## 🌐 Deploy público
+## Deploy público
 
 https://api-productos-6ncp.onrender.com/swagger/
