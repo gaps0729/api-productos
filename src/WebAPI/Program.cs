@@ -10,7 +10,10 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.EnableAnnotations();
+});
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=productos.db"));
